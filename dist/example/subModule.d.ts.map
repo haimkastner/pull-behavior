@@ -1,0 +1,1 @@
+{"version":3,"file":"subModule.d.ts","sourceRoot":"","sources":["../../example/subModule.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,iBAAiB,CAAA;AAE9C,qBAAa,SAAS;IAElB;;;;;OAKG;IACI,kBAAkB,EAAE,YAAY,CAAC,MAAM,EAAE,CAAC,CAAgC;;IAgBjF;;;OAGG;IACI,mBAAmB,CAAC,OAAO,EAAE,MAAM;CAG7C"}
