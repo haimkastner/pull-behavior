@@ -39,7 +39,7 @@ class MainModule {
 ## In sub module
 ```typescript
 
-import { PullBehavior } from 'pullBehavior';
+import { PullBehavior } from 'pull-behavior';
 
 export class SubModule {
 
@@ -65,6 +65,11 @@ export class SubModule {
     }
 }
 
+```
+
+To pulling in synchronous, use same API with sync in name.
+```typescript
+this.retriveData.isPullingSyncAvailble === false
 ```
 
 For real example see `example` folder.

@@ -14,10 +14,22 @@ export class PullBehavior<T> {
     private pullMethod: (() => Promise<T>) | undefined;
 
     /**
+     * The pull synchronous function.
+     */
+    private pullSyncMethod: (() => T) | undefined;
+
+    /**
      * Is the holder set the pull function or not?
      */
     public get isPullingAvailble(): boolean {
         return this.pullMethod !== undefined;
+    }
+
+    /**
+     * Is the holder set the pull synchronous function or not?
+     */
+    public get isPullingSyncAvailble(): boolean {
+        return this.pullSyncMethod !== undefined;
     }
 
     /**
@@ -29,6 +41,14 @@ export class PullBehavior<T> {
     }
 
     /**
+     * Set the pull synchronous function.
+     * Used in the module that get pull *from* only.
+     */
+    public setPullSyncMethod(pullSyncMethod: () => T) {
+        this.pullSyncMethod = pullSyncMethod;
+    }
+
+    /**
      * Pull the current data.
      * Used in the puller module only.
      */
@@ -37,5 +57,16 @@ export class PullBehavior<T> {
             throw new Error(`The pull method not set yet. \nMake sure that 'setPullMethod' called in holder module`);
         }
         return await this.pullMethod();
+    }
+
+    /**
+     * Pull the current data synchronous.
+     * Used in the puller module only.
+     */
+    public pullSync(): T {
+        if (!this.pullSyncMethod) {
+            throw new Error(`The pull method not set yet. \nMake sure that 'setPullSyncMethod' called in holder module`);
+        }
+        return this.pullSyncMethod();
     }
 }

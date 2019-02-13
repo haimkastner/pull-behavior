@@ -1,6 +1,6 @@
 {
   "name": "pull-behavior",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Haim Kastner",
     "email": "haim.kastner@gmail.com",
@@ -14,8 +14,8 @@
     "url": "https://github.com/haimkastner/pull-behavior/issues"
   },
   "homepage": "https://github.com/haimkastner/pull-behavior#readme",
-  "description": "Pull Behavior is a mechanism to retrieve data from a module that cannot be referenced directly",
-  "main": "dist/index.js",
+  "description": "Pull Behavior is a lightweight and very simple mechanism to retrieve data from a module that cannot be referenced directly",
+  "main": "dist/pullBehavior.js",
   "scripts": {
     "build": "tsc"
   },
